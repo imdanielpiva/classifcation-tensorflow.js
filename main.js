@@ -49,11 +49,8 @@ class Main {
     }
 
     navigator.mediaDevices.getUserMedia({
-      video: {
-        facingMode: { exact: "environment" }
-      },
-      audio: false,
-      
+      video: true,
+      audio: false
     })
       .then((stream) => {
         this.video.srcObject = stream;
